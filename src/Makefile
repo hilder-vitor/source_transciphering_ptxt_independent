@@ -6,6 +6,7 @@ all: test_final test_final_mod_p test_homomorphic_filip_mod_p
 	 
 clean:
 	$(RM) test_final test_final_mod_p test_filip test_homomorphic_filip_mod_p *.o libfinal.a
+	$(RM) tiny-aes/test.o tiny-aes/test.elf tiny-aes/test.map tiny-aes/aes.o
 
 test_final: FINAL.h libfinal.a
 	$(CCX) $(CCXFLAGS) -o test_final test_final.cpp libfinal.a $(DEPS)
